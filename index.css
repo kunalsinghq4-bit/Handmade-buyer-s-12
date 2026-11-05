@@ -1,0 +1,22 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-ground text-slate-900 font-sans antialiased}
+.btn{@apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl px-5 font-bold transition active:scale-95}
+.btn-cta{@apply btn bg-gold text-slate-900 hover:bg-gold-dark}
+.btn-brand{@apply btn bg-brand text-white}
+.btn-ghost{@apply btn border border-brand text-brand bg-white}
+.chip{@apply inline-flex min-h-[44px] items-center whitespace-nowrap rounded-full border border-slate-300 bg-white px-4 text-sm}
+.tag{@apply rounded bg-slate-900/80 px-2 py-0.5 text-[11px] font-bold uppercase text-white}
+@keyframes pop{50%{transform:scale(1.35)}}.pop{animation:pop .3s}
+@keyframes sk{50%{opacity:.5}}.sk{animation:sk 1.2s infinite;@apply bg-slate-200 rounded-xl}
+
+.font-display{font-family:'Rozha One','DM Sans',serif;font-weight:400;letter-spacing:-.01em}
+/* block-print border strip, drawn once as an inline svg tile */
+.blockprint{background-color:#2A2A86;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='14'%3E%3Cpath d='M16 1l6 6-6 6-6-6z' fill='%23F5A623'/%3E%3Ccircle cx='2' cy='7' r='1.6' fill='%23F5A623'/%3E%3Ccircle cx='30' cy='7' r='1.6' fill='%23F5A623'/%3E%3C/svg%3E");background-size:32px 14px;height:14px}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.14) translate(-1.5%,-1%)}}.kb{animation:kb 9s ease-out forwards}
+@keyframes spin{to{transform:rotate(360deg)}}.spin-slow{animation:spin 22s linear infinite}
+@keyframes slidein{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}.slidein{animation:slidein .7s .15s both}
+@keyframes marq{to{transform:translateX(-50%)}}.marq{animation:marq 28s linear infinite;width:max-content}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}.fill{transform-origin:left;animation:fill 6s linear forwards}
+.noscrollbar{scrollbar-width:none}.noscrollbar::-webkit-scrollbar{display:none}
+@media (prefers-reduced-motion:reduce){.kb,.spin-slow,.slidein,.marq,.fill{animation:none}.fill{transform:none}}
+:focus-visible{outline:3px solid #F5A623;outline-offset:2px}
